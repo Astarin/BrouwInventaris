@@ -196,6 +196,7 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Artikel.cs" />
     <Compile Include="Models\Brouwerij.cs" />
+    <Compile Include="Models\DbInventarisContext.cs" />
     <Compile Include="Models\Hop.cs" />
     <Compile Include="Models\Mout.cs" />
     <Compile Include="Models\User.cs" />

@@ -7,6 +7,7 @@ namespace BrouwInventaris.Models
 {
     public class Aankoop
     {
+        public int Id { get; set; }
         public Artikel Artikel { get; set; }
         public User User { get; set; }
         public decimal Prijs { get; set; }

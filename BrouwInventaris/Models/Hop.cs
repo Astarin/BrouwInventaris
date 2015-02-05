@@ -7,6 +7,7 @@ namespace BrouwInventaris.Models
 {
     public class Hop:Artikel
     {
+        
         public decimal Alfa { get; set; }
     }
 }
