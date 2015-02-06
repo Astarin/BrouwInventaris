@@ -12,12 +12,6 @@ namespace BrouwInventaris.Controllers
         public ActionResult Index()
         {
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
-            // nog wegdoen
-            using (DbInventarisContext db = new DbInventarisContext())
-            {
-                db.Artikels.Add(new Artikel { Naam = "Test", Omschrijving = "nog meer test" });
-                db.SaveChanges();
-            }
             return View();
         }
 

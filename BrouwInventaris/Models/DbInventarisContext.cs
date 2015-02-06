@@ -10,6 +10,7 @@ namespace BrouwInventaris.Models
 {
     public class DbInventarisContext : DbContext
     {
+        // Info Connect in server explorer met : (LocalDb)\V11.0
         public DbInventarisContext()  : base("Model1")// Later veranderen kijk in web.config
         {
             Database.SetInitializer<DbInventarisContext>(new DbDropCreateAlwaysInitializer()); // altijd nieuwe database volgens de initialisatie klasse.
