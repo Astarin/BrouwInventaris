@@ -8,11 +8,12 @@ using System.Data;
 
 namespace BrouwInventaris.Models
 {
-    class DbInventarisContext : DbContext
+    public class DbInventarisContext : DbContext
     {
         public DbInventarisContext()  : base("Model1")// Later veranderen kijk in web.config
         {
-            Database.SetInitializer<DbInventarisContext>(new DropCreateDatabaseAlways<DbInventarisContext>());
+            Database.SetInitializer<DbInventarisContext>(new DbDropCreateAlwaysInitializer()); // altijd nieuwe database volgens de initialisatie klasse.
+            //Database.SetInitializer<DbInventarisContext>(new DropCreateDatabaseAlways<DbInventarisContext>());
         //    Database.SetInitializer<DbInventarisContext>(new CreateDatabaseIfNotExists<DbInventarisContext>());
         }
         public DbSet<User> Users { get; set; }
