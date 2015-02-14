@@ -11,11 +11,9 @@ namespace BrouwInventaris.Models
     public class DbInventarisContext : DbContext
     {
         // Info Connect in server explorer met : (LocalDb)\V11.0
-        public DbInventarisContext()  : base("Model1")// Later veranderen kijk in web.config
+        public DbInventarisContext()  : base("BrouwInventaris")
         {
             Database.SetInitializer<DbInventarisContext>(new DbDropCreateAlwaysInitializer()); // altijd nieuwe database volgens de initialisatie klasse.
-            //Database.SetInitializer<DbInventarisContext>(new DropCreateDatabaseAlways<DbInventarisContext>());
-        //    Database.SetInitializer<DbInventarisContext>(new CreateDatabaseIfNotExists<DbInventarisContext>());
         }
         public DbSet<User> Users { get; set; }
         public DbSet<Brouwerij> Brouwerijen { get; set; }

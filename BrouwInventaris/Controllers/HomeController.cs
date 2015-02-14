@@ -11,6 +11,12 @@ namespace BrouwInventaris.Controllers
     {
         public ActionResult Index()
         {
+            //git commit excuus
+            using (DbInventarisContext db = new DbInventarisContext())
+            {
+                db.Brouwerijen.Add(new Brouwerij { Naam = "Rockabeery" });
+                db.SaveChanges();
+            }
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
             return View();
         }
