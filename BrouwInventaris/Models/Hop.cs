@@ -10,5 +10,10 @@ namespace BrouwInventaris.Models
         
         public decimal Alfa { get; set; }
 
+        public override string ConvertAmountToHumanReadable(int Amount)
+        {
+            //todo
+            return string.Format("{0} g", Amount);
+        }
     }
 }

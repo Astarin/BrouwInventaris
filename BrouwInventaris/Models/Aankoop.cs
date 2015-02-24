@@ -13,5 +13,10 @@ namespace BrouwInventaris.Models
         public decimal Prijs { get; set; }
         public DateTime Aankoopdatum { get; set; }
         public int Hoeveelheid { get; set; }
+
+        public string GetHumanReadableAmount()
+        {
+            return Artikel.ConvertAmountToHumanReadable(Hoeveelheid);
+        }
     }
 }

@@ -10,5 +10,10 @@ namespace BrouwInventaris.Models
         public int Ebc { get; set; }
         public int MaximumStorting { get; set; }
         // test
+
+        public override string ConvertAmountToHumanReadable(int Amount)
+        {
+            return string.Format("{0} g", Amount);
+        }
     }
 }

@@ -17,6 +17,12 @@ namespace BrouwInventaris.Models
             Artikel thermometer = new Artikel { Naam = "Thermometer", Omschrijving = "dient om de temperatuur te meten." };
             Hop saaz = new Hop { Naam = "Saaz", Alfa = 5.1m, Omschrijving = "Courant gebruikte aromahop." };
             Mout pilsmout = new Mout { Ebc = 5, MaximumStorting = 100, Naam="Pilsmout", Omschrijving="Meest gebruikte mout in verschillende bierstijlen." };
+            Gist gist = new Gist { Verpakking = Verpakking.Smackpack, Naam= "Whyeast", Omschrijving ="Westmalle"};
+            Gist gist2 = new Gist { Verpakking = Verpakking.Zakje, Naam = "T-58", Omschrijving = "korrelgist alle biertype" };
+            Overige overige1 = new Overige { Naam = "Kristalsuiker", Omschrijving = "ook voor in de koffie." };
+            Overige overige2 = new Overige{Naam = "Koriander", Omschrijving="Ook lekker in nen curry"};
+
+
             User bernd = new User { UserName = "Astarin", Brouwerij = rockaBeery, Email = "ikkezelf@msn.com", FirstName = "Bernd", LastName = "Vertommen" };
             User jimmy = new User { UserName = "Dzjimmie", Brouwerij = rockaBeery, Email = "dendjimmy@msn.com", FirstName = "Jimmy", LastName = "Henderickx" };
             User kobe = new User { UserName = "minister1", Brouwerij = rockaBeery, Email = "denKobe@msn.com", FirstName = "Kobe", LastName = "Vercauteren" };
@@ -33,6 +39,10 @@ namespace BrouwInventaris.Models
             context.Artikels.Add(thermometer);
             context.Artikels.Add(saaz);
             context.Artikels.Add(pilsmout);
+            context.Artikels.Add(gist);
+            context.Artikels.Add(gist2);
+            context.Artikels.Add(overige1);
+            context.Artikels.Add(overige2);
             context.Users.Add(bernd);
             context.Users.Add(kobe);
             context.Users.Add(jimmy);

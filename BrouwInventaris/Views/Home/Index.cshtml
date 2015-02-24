@@ -1,4 +1,4 @@
-﻿@model List<BrouwInventaris.Models.Artikel>
+﻿@model List<BrouwInventaris.Models.Aankoop>
 
 <table class="table table-hover">
     <thead>
@@ -9,23 +9,12 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>mdo</td>
-        </tr>
-        <tr>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>fat</td>
-        </tr>
-
-        @foreach (var item in Model)
+        @foreach (BrouwInventaris.Models.Aankoop item in Model)
 {
             <tr>
-                <td>@item.GetType().Name</td>
-                <td>@item.Naam</td>
-                <td>todo</td>
+                <td>@item.Artikel.GetType().Name</td>
+                <td>@item.Artikel.Naam</td>
+                <td>@item.GetHumanReadableAmount()</td>
             </tr>
            
 }

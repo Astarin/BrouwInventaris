@@ -15,5 +15,9 @@ namespace BrouwInventaris.Models
         public string Naam{ get; set; }
         public string Omschrijving { get; set; }
 
+        public virtual string ConvertAmountToHumanReadable(int Amount)
+        {
+            return string.Format("{0} stuks",Amount);
+        }
     }
 }

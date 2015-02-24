@@ -21,6 +21,9 @@ namespace BrouwInventaris.Models
         public DbSet<Artikel> Artikels{ get; set; }
         public DbSet<Hop> Hoppen { get; set; }
         public DbSet<Mout> Mouten { get; set; }
+        public DbSet<Overige> Overigen { get; set; }
+        public DbSet<Gist> Gisten { get; set; }
+
         
     }
 }
