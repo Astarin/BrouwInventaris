@@ -1,0 +1,46 @@
+﻿@model BrouwInventaris.Models.Hop
+
+<script src="~/Scripts/jquery-1.8.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Hop</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Alfa)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Alfa)
+            @Html.ValidationMessageFor(model => model.Alfa)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Naam)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Naam)
+            @Html.ValidationMessageFor(model => model.Naam)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Omschrijving)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Omschrijving)
+            @Html.ValidationMessageFor(model => model.Omschrijving)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

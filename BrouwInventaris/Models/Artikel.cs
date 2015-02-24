@@ -9,15 +9,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace BrouwInventaris.Models
 {
   
-    public class Artikel
+    public abstract class Artikel
     {
         public int Id { get; set; }
         public string Naam{ get; set; }
         public string Omschrijving { get; set; }
 
-        public virtual string ConvertAmountToHumanReadable(int Amount)
-        {
-            return string.Format("{0} stuks",Amount);
-        }
+        public abstract string ConvertAmountToHumanReadable(int Amount);
+
     }
 }

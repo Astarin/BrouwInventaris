@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+<ul id="selectType">
+    <li data-artikeltype="hop">Hop</li>
+    <li data-artikeltype="mout">Mout</li>
+    <li>Gist</li>
+    <li>Overige</li>
+</ul>
+
+
+<div id="hop" class="create-form">
+    @Html.Partial("CreateHop")
+</div>
+<div id="mout" class="create-form">
+    @Html.Partial("CreateMout")
+</div>
+
+
+<script type="text/javascript">
+    $('.create-form').hide();
+
+    $('#selectType li').on('click', function () {
+        
+        $('.create-form').hide();
+        
+        var actief_type = $(this).data('artikeltype');
+        $('#' + actief_type).fadeIn();
+    });
+</script>

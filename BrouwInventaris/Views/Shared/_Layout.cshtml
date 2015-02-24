@@ -56,6 +56,8 @@
     <div class="container">
         @RenderSection("featured", required: false)
     </div>
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
 
         <!-- /.container -->
         <!-- Bootstrap core JavaScript
