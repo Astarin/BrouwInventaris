@@ -9,5 +9,6 @@ namespace BrouwInventaris.Models
     {
         
         public decimal Alfa { get; set; }
+
     }
 }

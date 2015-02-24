@@ -13,7 +13,7 @@ namespace BrouwInventaris.Models
         // Info Connect in server explorer met : (LocalDb)\V11.0
         public DbInventarisContext()  : base("BrouwInventaris")
         {
-            Database.SetInitializer<DbInventarisContext>(new DbDropCreateAlwaysInitializer()); // altijd nieuwe database volgens de initialisatie klasse.
+            //Database.SetInitializer<DbInventarisContext>(new DbDropCreateAlwaysInitializer()); // altijd nieuwe database volgens de initialisatie klasse.
         }
         public DbSet<User> Users { get; set; }
         public DbSet<Brouwerij> Brouwerijen { get; set; }
